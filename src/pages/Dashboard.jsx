@@ -24,18 +24,24 @@ With a focus on responsiveness and ease of use, the Placement and Guidance Hub e
     <div className='container dashboard'>
       <div className='card'>
         <img src={Profile} width={120} height={120} ></img>
+        <div>My Profile</div>
       </div>
       <div className='card'>
         <img src={Mentor} width={140} height={120} ></img>
+        <div>Mentor Details</div>
       </div>
       <div className='card'>
         <img src={schedule} width={140} height={120} ></img>
+        <div>Placement Schedule</div>
       </div>
       <div className='card'>
         <img src={carrer} width={140} height={120} ></img>
+        <div>My Career</div>
+ 
       </div>
       <div className='card'>
         <img src={escape} width={140} height={120} ></img>
+        <div>Drive Details</div>
       </div>
     </div>
     </section>

@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 
 import { CgProfile } from "react-icons/cg";
 import Dashboard from './pages/Dashboard';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import Login from './pages/Login';
 import Navbar from './components/Navbar';
 import ProfilePage from './pages/ProfilePage';
 import React from 'react';
@@ -15,6 +17,7 @@ function App() {
   const [showMenu, setShowMenu] = useState(false);
   return (
 <BrowserRouter>
+<GoogleOAuthProvider clientId="146252088511-iel0g4aggqv0omaa3hprk13m2cr1qjba.apps.googleusercontent.com">
     <div className='pp'>
       <header>
         <div className='headerPart'>
@@ -27,6 +30,7 @@ function App() {
        <Navbar show = {showMenu}/>
        <div className='main'>
           <Routes>
+           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Dashboard />} />
           <Route path="/profile" element={<ProfilePage />} />
           
@@ -34,6 +38,7 @@ function App() {
        </div>
         
     </div>
+    </GoogleOAuthProvider>
     </BrowserRouter>
   );
 }
