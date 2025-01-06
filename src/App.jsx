@@ -14,24 +14,25 @@ import logo from './images/mvgr-logo.png'
 import { useState } from 'react';
 
 function App() {
-  const [showMenu, setShowMenu] = useState(false);
+  // const [showMenu, setShowMenu] = useState(false);
   return (
 <BrowserRouter>
 <GoogleOAuthProvider clientId="146252088511-iel0g4aggqv0omaa3hprk13m2cr1qjba.apps.googleusercontent.com">
     <div className='pp'>
-      <header>
+      {/* <header>
         <div className='headerPart'>
-        {/* <div><img src={logo} alt='college logo' className='logo'/></div> */}
+        <div><img src={logo} alt='college logo' className='logo'/></div>
         <div><RiMenuFill onClick={()=> {setShowMenu(!showMenu)}} onMouseOver={()=> {setShowMenu(!showMenu)}} className='menuIcon '/></div>  
-        {/* onClick={()=> {setShowMenu(!showMenu)}} */}
-        {/* <div className='cilckprofile'><CgProfile /></div>  */}
+        onClick={()=> {setShowMenu(!showMenu)}}
+        <div className='cilckprofile'><CgProfile /></div> 
         </div>
-      </header>
-       <Navbar show = {showMenu}/>
+      </header> */}
+       {/* <Navbar show = {showMenu}/> */}
+       <Login/>
        <div className='main'>
           <Routes>
            <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/profile" element={<ProfilePage />} />
           
           </Routes>
