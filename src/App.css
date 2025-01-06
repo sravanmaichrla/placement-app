@@ -12,20 +12,24 @@ body{
 header{
   padding: 10px;
   background: #03273e;
-  height:80px;
+  height: 50px;
+
 }
 .sidenav{
-  width:240px;
+  width:220px;
   background: #ececed;
   box-shadow: 10px 10px 15px 4px rgba(0,0,0,0.4);
   position: absolute;
-  height:95vh;
-  padding: 0 30px ;
+  padding: 0 30px;
+  min-height: 95%;
+
   left:-100%;
   transition: all 1s;
 } 
 .sidenav.active{
   left:0;
+  position:fixed;
+  
 }
 
 ul{
@@ -45,12 +49,19 @@ ul li{
 }
 ul li:hover{
   background-color: #6fa1bf;
+  transform: scale(1.05);
   transition: all 0.4s;
   cursor: pointer;
-}
 
+}
+li svg{
+  display: inline;
+  margin-right: 10px;
+  align-content: center;
+  fill: #262f54;
+}
 header .logo{
-  width:80px;
+  width:40px;
   align-items: center;
   margin: 2px;
   padding: 5px;
@@ -65,14 +76,15 @@ header .logo{
 
 .headerPart{
   display: flex;
-  width:180px;
-  padding: 0 20px;
-  margin-bottom: 20px;
-  justify-content: space-between;
+  width:auto;
+  padding: 10px  30px;
+  justify-content: left;
   align-items: center;
 }
+
+
 header svg{
-  font-size: 50px;
+  font-size: 30px;
 }
 .cilckprofile{
   width: 200px;
@@ -88,5 +100,38 @@ header svg{
 
 .menuIcon:hover{
   cursor:pointer;
-  transition: all ;
+  /* transition: all 1s ease-in; */
+}
+
+.container{
+  color:#000;
+  background-color: #e0e0e0;
+  height :auto;
+  padding: 20px;
+  margin-top: 7vh;
+  margin-left: 40vh;
+  margin-right: 5vh;
+  max-width:405vh;
+  align-content: center;
+  border-radius: 20px;
+}
+
+.para{
+  color: #000;
+  font-family: Verdana, sans-serif;
+  font-weight: 400;
+  text-align: justify;
+}
+
+.dashboard{
+  display: flex;
+  background-color: #ffffff;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:8px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.513);
+}
+.card{
+  padding:40px;
 }
