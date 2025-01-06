@@ -5,7 +5,7 @@ import { jwtDecode } from "jwt-decode";
 import { useState } from 'react';
 
 function Login() {
-    const [showLogin, setShowLogin] = useState(false);
+    // const [showLogin, setShowLogin] = useState(false);
     // const responseSucess = (credentialResponse) => {
     //     setShowLogin(true);
     //     const decoded = jwtDecode(credentialResponse.credential);
@@ -21,14 +21,17 @@ function Login() {
     //     setShowLogin(true);
     //   };
 
-    const login = useGoogleLogin({
-        onSuccess: codeResponse => {const decoded = jwtDecode(codeResponse.credential);
-            console.log(decoded)},
-        flow: 'auth-code',setShowLogin : true,
-      });
   return (
     <div>
-        <button onClick={()=>{login()}}>Sign in with Google 🚀</button>
+        <GoogleLogin
+    onSuccess={credentialResponse => {
+        const decoded = jwtDecode(credentialResponse.credential);
+      console.log(decoded);
+    }}
+    onError={() => {
+      console.log('Login Failed');
+    }}
+  />;
     </div>
       
   )

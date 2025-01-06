@@ -28,7 +28,6 @@ function App() {
         </div>
       </header> */}
        {/* <Navbar show = {showMenu}/> */}
-       <Login/>
        <div className='main'>
           <Routes>
            <Route path="/login" element={<Login />} />

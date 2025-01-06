@@ -12,8 +12,8 @@ const [profile,setProfile] = useState(false);
   return (
     <div>
       <Navbar/>
-          <div>
-          <h1>Profile Page</h1>
+          <div className="container">
+              
           </div>
     </div>
     
