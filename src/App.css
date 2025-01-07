@@ -146,3 +146,9 @@ header svg{
   transition: all 0.4s ease-in;
 
 }
+
+.userWelcome button , h1{
+  padding:30px;
+  color: #000;
+  text-align: center;
+}
