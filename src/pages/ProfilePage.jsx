@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 import Navbar from '../components/Navbar'
 
-function ProfilePage() {
+function ProfilePage({authorized}) {
 
 const [user,setUser] = useState({});
 const [profile,setProfile] = useState(false);

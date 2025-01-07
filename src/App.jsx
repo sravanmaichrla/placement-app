@@ -1,7 +1,10 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter, Route, Routes } from 'react-router';
 
+import AdminDashboard from './Admin/pages/Dashboard';
+import Adminlogin from './Admin/Adminlogin';
 import { CgProfile } from "react-icons/cg";
 import Dashboard from './pages/Dashboard';
 import { GoogleOAuthProvider } from '@react-oauth/google';
@@ -30,8 +33,9 @@ function App() {
        {/* <Navbar show = {showMenu}/> */}
        <div className='main'>
           <Routes>
-           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/login" element={<Login />} />
+          <Route path='/admindashboard' element={<AdminDashboard/>}/>
+          <Route path="/dashboard" element={()=>{}} />
           <Route path="/profile" element={<ProfilePage />} />
           
           </Routes>
