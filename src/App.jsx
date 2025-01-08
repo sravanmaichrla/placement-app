@@ -3,12 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter, Route, Routes } from 'react-router';
 
-import AdminDashboard from './Admin/pages/Dashboard';
-import Adminlogin from './Admin/Adminlogin';
 import { CgProfile } from "react-icons/cg";
 import Dashboard from './pages/Dashboard';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import Login from './pages/Login';
+import { Loginsignup } from './components/Loginsignup/Loginsignup';
 import Navbar from './components/Navbar';
 import ProfilePage from './pages/ProfilePage';
 import React from 'react';
@@ -33,8 +32,8 @@ function App() {
        {/* <Navbar show = {showMenu}/> */}
        <div className='main'>
           <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path='/admindashboard' element={<AdminDashboard/>}/>
+          <Route path="/" element={<Login />} />
+          <Route path='/admin' element={<Loginsignup/>}/>
           <Route path="/dashboard" element={()=>{}} />
           <Route path="/profile" element={<ProfilePage />} />
           
